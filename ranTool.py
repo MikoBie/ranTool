@@ -58,6 +58,9 @@ if not myDlg.OK:
 ## Creates a full screen window on MacBook Pro Early 2015 13 inch
 win = visual.Window(fullscr=True, size=[1280,800])
 
+## Make the mouse courser invisible
+win.mouseVisible = False
+
 # Creates the instruction objects sex specific
 if myDlg.data[1] == 'Kobieta':
     instruction = visual.ImageStim(win,image='instrukcja_k/instrukcja.png', size=(1.92,1.2))
