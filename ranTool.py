@@ -7,7 +7,7 @@ import glob
 import pandas
 
 ## How many times the red square should display
-REPETITION_NUMBER = 5
+REPETITION_NUMBER = 300
 
 ## How long the red square should be displayed in seconds
 RED_SQUARE_DISPLAY_LENGTH = .75
