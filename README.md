@@ -7,7 +7,7 @@ default `make_conditions.py` creates a list of 50 visible history and 50 invisib
 
 ## Main Dependencies
 
-* python3.6 ([anaconda distribution](https://www.anaconda.com/download/) is preferred)
+* python3.7 ([anaconda distribution](https://www.anaconda.com/download/) is preferred)
 * other _python_ dependencies are specified in `requirenments.txt`
 * [Latin modern family of fonts](http://www.gust.org.pl/projects/e-foundry/latin-modern)
 * [TexLive 2019](https://www.tug.org/texlive/)

@@ -70,16 +70,16 @@ else:
     instruction2 = visual.ImageStim(win,image='instrukcja2_m/instrukcja2.png', size=(1.92,1.3969904240766073))
 
 ## Creates red square object
-stim = visual.Rect(win, size = [800,800], lineColor = 'red', fillColor = 'red', units = 'pix')
+stim = visual.Rect(win, size = [550,550], lineColor = 'red', fillColor = 'red', units = 'pix')
 
 ## Creates objects for displaying history
-hist0 = visual.TextStim(win, text='', pos=(1,.8), font='Latin Modern Roman')
-hist1 = visual.TextStim(win, text='', pos=(.9,.8), font='Latin Modern Roman')
-hist2 = visual.TextStim(win, text='', pos=(.8,.8), font='Latin Modern Roman')
-hist3 = visual.TextStim(win, text='', pos=(.7,.8), font='Latin Modern Roman')
-hist4 = visual.TextStim(win, text='', pos=(.6,.8), font='Latin Modern Roman')
-hist5 = visual.TextStim(win, text='', pos=(.5,.8), font='Latin Modern Roman')
-hist6 = visual.TextStim(win, text='', pos=(.4,.8), font='Latin Modern Roman')
+hist0 = visual.TextStim(win, text='', pos=(0,.8), font='Latin Modern Roman')
+hist1 = visual.TextStim(win, text='', pos=(-.1,.8), font='Latin Modern Roman')
+hist2 = visual.TextStim(win, text='', pos=(-.2,.8), font='Latin Modern Roman')
+hist3 = visual.TextStim(win, text='', pos=(-.3,.8), font='Latin Modern Roman')
+hist4 = visual.TextStim(win, text='', pos=(-.4,.8), font='Latin Modern Roman')
+hist5 = visual.TextStim(win, text='', pos=(-.5,.8), font='Latin Modern Roman')
+hist6 = visual.TextStim(win, text='', pos=(-.6,.8), font='Latin Modern Roman')
 hist = [hist6,hist5,hist4,hist3,hist2,hist1,hist0]
 
 ## Creates ending object
