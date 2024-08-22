@@ -5,6 +5,8 @@ This is a _python_ based script to conduct simple experiments on human-generated
 The main script `ranTool.py` reads information about the condition from `conditions.csv` file which might be created with the use of `make_conditions.py` _python_ script. By 
 default `make_conditions.py` creates a list of 50 visible history and 50 invisible history conditions.
 
+The project was supported by the funds from the Polish National Science Center (project no. 2019/35/N/HS6/04318).
+
 ## Main Dependencies
 
 * python3.7 ([anaconda distribution](https://www.anaconda.com/download/) is preferred)
