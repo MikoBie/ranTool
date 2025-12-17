@@ -5,6 +5,7 @@ import sys
 import re
 import glob
 import pandas
+import os
 
 ## How many times the red square should display
 REPETITION_NUMBER = 300
@@ -20,11 +21,11 @@ conditions = pandas.read_csv('conditions.csv', sep = ';')
 
 ## Create a pop up which gathers demographic data
 myDlg = gui.Dlg(labelButtonOK='Kontynuuj', labelButtonCancel='Przerwij', size=[800,600])
-myDlg.addField(label='Id')
-myDlg.addField(label='Płeć', choices=['Kobieta','Mężczyzna'])
-myDlg.addField(label='Dominująca ręka', choices=['Lewa', 'Prawa'])
-myDlg.addField(label='Wiek')
-myDlg.addField(label='Kierunek Studiów')
+myDlg.addField(key='Id')
+myDlg.addField(key='Płeć', choices=['Kobieta','Mężczyzna'])
+myDlg.addField(key='Dominująca ręka', choices=['Lewa', 'Prawa'])
+myDlg.addField(key='Wiek')
+myDlg.addField(key='Kierunek Studiów')
 info = gui.Dlg(title = 'Błąd. Uzupłenij poprawnie wszystkie pola!', size=[800,600])
 info2 = gui.Dlg(title = 'Błąd. Zły numer osoby badanej!', size=[800,600])
 
@@ -56,7 +57,7 @@ if not myDlg.OK:
     sys.exit(0)
 
 ## Creates a full screen window on MacBook Pro Early 2015 13 inch
-win = visual.Window(fullscr=True, size=[1280,800])
+win = visual.Window(fullscr=True, size=[1920,1080])
 
 ## Make the mouse courser invisible
 win.mouseVisible = False
@@ -83,7 +84,7 @@ hist6 = visual.TextStim(win, text='', pos=(-.6,.8), font='Latin Modern Roman')
 hist = [hist6,hist5,hist4,hist3,hist2,hist1,hist0]
 
 ## Creates ending object
-end = visual.TextStim(win, text='Koniec tej części badania.', pos=(0.5,0), font='Latin Modern Roman')
+end = visual.TextStim(win, text='Koniec tej części badania.', pos=(0,0), font='Latin Modern Roman')
 
 ## Initialize the clock and clear keys buffer
 myClock=clock.Clock()
@@ -102,7 +103,9 @@ event.waitKeys(keyList = ['space'], clearEvents=True)
 
 ## Creates file name
 file_name = 'data/' + condition + '_' + myDlg.data[0] + '.csv'
-
+if not os.path.exists("data"):
+    os.mkdir("data")
+    
 ## Opens a file connection
 with open(file_name,'w') as file:
     file.write('id;sex;hand;age;faculty;condition;trial;time;key'+'\n')
